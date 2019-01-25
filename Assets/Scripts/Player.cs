@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Collision");
         GameObject obj = collision.gameObject;
-        if (obj.layer == 8)
+        if (obj.layer == LayerDetection.ground)
         {
             startJump = false;
         }
