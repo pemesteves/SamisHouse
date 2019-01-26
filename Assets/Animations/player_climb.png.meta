@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc5e8bac896ab8b4b8004a32ce78296c
+guid: 8923f00bb59b40447a1180da4c4642fc
 TextureImporter:
   fileIDToRecycleName:
     21300000: player_climb_0
@@ -1430,7 +1430,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 52d0cfa684e1f3442af9c75eaef04e4f
+    spriteID: a042bac05bde06145b29497e9c97d01d
     vertices: []
     indices: 
     edges: []

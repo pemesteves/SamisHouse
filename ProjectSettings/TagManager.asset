@@ -15,7 +15,7 @@ TagManager:
   - 
   - Ground
   - Crate
-  - 
+  - climbable
   - destroy_player_trigger
   - water
   - 
