@@ -8,13 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public float right_wall;
     public float climb_speed = 1;
 
-    private bool startJump;
+    public bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
     private UI_game UI;
     private Animator anim;
 
-    private bool colliding = false;
+    public bool colliding = false;
     private bool grounded = false;
 
     // Start is called before the first frame update
@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.gravityScale = 0.1f;
             grounded = true;
-            startJump = false;
+            //startJump = false;
         }
     }
 
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>())
+        if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>() && other.gameObject.transform.tag != "Crank")
             colliding = true;
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar

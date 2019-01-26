@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4743530321291387515}
   - component: {fileID: 2135581290948159136}
   - component: {fileID: 8818804567777612050}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left_wall: -16.5
   right_wall: 53.5
-  UI: {fileID: 0}
+  climb_speed: 1
 --- !u!50 &4743530321291387515
 Rigidbody2D:
   serializedVersion: 4

@@ -405,6 +405,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: crank-gem4
       objectReference: {fileID: 0}
+    - target: {fileID: 8250614375577633598, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crank
+      objectReference: {fileID: 0}
     - target: {fileID: 8181943133894605637, guid: 9e23e0d9eec9aaa4f997e68221068e83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -487,6 +492,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 441a2d89600064d4d9ced045b19d0ae6,
         type: 3}
+    - target: {fileID: 5056975278228674938, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: crank_id
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e23e0d9eec9aaa4f997e68221068e83, type: 3}
 --- !u!1 &667143006
@@ -6145,6 +6155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: crank-gem5
       objectReference: {fileID: 0}
+    - target: {fileID: 8250614375577633598, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crank
+      objectReference: {fileID: 0}
     - target: {fileID: 8181943133894605637, guid: 9e23e0d9eec9aaa4f997e68221068e83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6227,6 +6242,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 441a2d89600064d4d9ced045b19d0ae6,
         type: 3}
+    - target: {fileID: 5056975278228674938, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: crank_id
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e23e0d9eec9aaa4f997e68221068e83, type: 3}
 --- !u!1 &753864980
@@ -6295,7 +6315,7 @@ GameObject:
   - component: {fileID: 1052311414}
   m_Layer: 0
   m_Name: crank-gem5
-  m_TagString: Untagged
+  m_TagString: Crank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6320,6 +6340,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  crank_id: 5
 --- !u!212 &1052311412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6426,7 +6447,7 @@ GameObject:
   - component: {fileID: 1190592295}
   m_Layer: 0
   m_Name: crank-gem3
-  m_TagString: Untagged
+  m_TagString: Crank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6451,6 +6472,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  crank_id: 3
 --- !u!212 &1190592293
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6557,7 +6579,7 @@ GameObject:
   - component: {fileID: 1211838235}
   m_Layer: 0
   m_Name: crank-gem2
-  m_TagString: Untagged
+  m_TagString: Crank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6582,6 +6604,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  crank_id: 2
 --- !u!212 &1211838233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6826,7 +6849,7 @@ GameObject:
   - component: {fileID: 1567897436}
   m_Layer: 0
   m_Name: crank-gem4
-  m_TagString: Untagged
+  m_TagString: Crank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6851,6 +6874,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  crank_id: 4
 --- !u!212 &1567897434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6954,6 +6978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: crank-gem2
       objectReference: {fileID: 0}
+    - target: {fileID: 8250614375577633598, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crank
+      objectReference: {fileID: 0}
     - target: {fileID: 8181943133894605637, guid: 9e23e0d9eec9aaa4f997e68221068e83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7041,6 +7070,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 441a2d89600064d4d9ced045b19d0ae6,
         type: 3}
+    - target: {fileID: 5056975278228674938, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: crank_id
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e23e0d9eec9aaa4f997e68221068e83, type: 3}
 --- !u!1 &1839106253
@@ -7089,6 +7123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: crank-gem3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250614375577633598, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crank
       objectReference: {fileID: 0}
     - target: {fileID: 8181943133894605637, guid: 9e23e0d9eec9aaa4f997e68221068e83,
         type: 3}
@@ -7160,6 +7199,11 @@ PrefabInstance:
       propertyPath: gems.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5056975278228674938, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: crank_id
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e23e0d9eec9aaa4f997e68221068e83, type: 3}
 --- !u!1 &1870226776
@@ -7174,7 +7218,7 @@ GameObject:
   - component: {fileID: 1870226779}
   - component: {fileID: 1870226778}
   - component: {fileID: 1870226780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7710,6 +7754,11 @@ PrefabInstance:
       propertyPath: right_wall
       value: 14.59
       objectReference: {fileID: 0}
+    - target: {fileID: 4743530321291387513, guid: 81dc40a493fbfdc4390cf793790017a0,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81dc40a493fbfdc4390cf793790017a0, type: 3}
 --- !u!1001 &3388522525572031049
@@ -7723,6 +7772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: crank-gem1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250614375577633598, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crank
       objectReference: {fileID: 0}
     - target: {fileID: 8181943133894605637, guid: 9e23e0d9eec9aaa4f997e68221068e83,
         type: 3}
@@ -7806,6 +7860,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 441a2d89600064d4d9ced045b19d0ae6,
         type: 3}
+    - target: {fileID: 5056975278228674938, guid: 9e23e0d9eec9aaa4f997e68221068e83,
+        type: 3}
+      propertyPath: crank_id
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e23e0d9eec9aaa4f997e68221068e83, type: 3}
 --- !u!212 &5069232009454824673
@@ -7962,7 +8021,7 @@ GameObject:
   - component: {fileID: 8250614375577633600}
   m_Layer: 0
   m_Name: crank-gem1
-  m_TagString: Untagged
+  m_TagString: Crank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7987,6 +8046,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  crank_id: 1
 --- !u!61 &8250614375577633600
 BoxCollider2D:
   m_ObjectHideFlags: 0
