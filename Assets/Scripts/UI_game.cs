@@ -15,13 +15,16 @@ public class UI_game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //level_number = Convert.ToInt32(level.text.Substring(6));
         level_number = SceneManager.GetActiveScene().buildIndex;
+        level.text = "LEVEL " + level_number;
+        number_keys = 0;
+        keys.text = "= " + number_keys;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update_number_keys()
     {
-        
+        number_keys += 1;
+        keys.text = "= " + number_keys;
     }
+
 }
