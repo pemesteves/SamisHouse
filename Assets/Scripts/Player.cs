@@ -54,5 +54,9 @@ public class Player : MonoBehaviour
         {
             startJump = false;
         }
+        else if(obj.layer == LayerDetection.water)
+        {
+            Destroy(this);
+        }
     }
 }
