@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float left_wall;
     public float right_wall;
     public float climb_speed = 1;
+
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     private bool colliding = false;
+    private bool grounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +50,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.D)) //Andar para a direita
-        {   
-            transform.Translate(.1f, 0, 0);
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+                transform.Translate(.15f, 0, 0);
+            else
+                transform.Translate(.1f, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -63,7 +68,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A)) //Andar para a esquerda
         {
-            transform.Translate(-.1f, 0, 0);
+            if (Input.GetKey(KeyCode.LeftShift))
+                transform.Translate(-.15f, 0, 0);
+            else
+                transform.Translate(-.1f, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -106,6 +114,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerDetection.ground)
+        {
+            rigidBody.gravityScale = 0.1f;
+            grounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (grounded)
+        {
+            grounded = false;
+            rigidBody.gravityScale = 4f;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         int layer = collider.gameObject.layer;
@@ -117,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.transform.tag != "Key")
+        if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>())
             colliding = true;
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
