@@ -614,6 +614,16 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 118033135}
+    - target: {fileID: 4743530321291387512, guid: 81dc40a493fbfdc4390cf793790017a0,
+        type: 3}
+      propertyPath: jump_force
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743530321291387515, guid: 81dc40a493fbfdc4390cf793790017a0,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4743530321291387508, guid: 81dc40a493fbfdc4390cf793790017a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81dc40a493fbfdc4390cf793790017a0, type: 3}
@@ -10224,7 +10234,7 @@ Tilemap:
       - {fileID: 21300004, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
       - {fileID: 21300006, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
       - {fileID: 21300008, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 12, y: 0, z: 0}
@@ -11887,6 +11897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748964465790465580, guid: 0523746569809be429261b4362a05443,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0523746569809be429261b4362a05443, type: 3}
