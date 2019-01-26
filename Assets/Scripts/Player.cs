@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
         {
             if (!startJump)
             {
-                Debug.Log("Jump");
                 startJump = true;
                 rigidBody.AddForce(Vector2.up * 500);
             }
@@ -50,9 +49,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision");
         GameObject obj = collision.gameObject;
-        if (obj.layer == LayerDetection.ground)
+        if (obj.layer == LayerDetection.ground || obj.layer == LayerDetection.crate)
         {
             startJump = false;
         }
