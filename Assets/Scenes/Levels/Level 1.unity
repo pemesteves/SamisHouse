@@ -628,7 +628,6 @@ GameObject:
   - component: {fileID: 787129875}
   - component: {fileID: 787129874}
   - component: {fileID: 787129876}
-  - component: {fileID: 787129877}
   m_Layer: 0
   m_Name: Key
   m_TagString: Key
@@ -737,18 +736,6 @@ PolygonCollider2D:
       - {x: 0.13, y: -0.51}
       - {x: 0.31, y: -0.22999999}
       - {x: 0.21, y: -0.02}
---- !u!114 &787129877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787129873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdf778df956ba1e46aab0287a04654cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &929750480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4306970562242791904, guid: 19c6304d576e40c4bbc3021fff04dfa4,
@@ -11663,7 +11650,7 @@ PrefabInstance:
     - target: {fileID: 1748964465790465582, guid: 0523746569809be429261b4362a05443,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.29
+      value: -2.83
       objectReference: {fileID: 0}
     - target: {fileID: 1748964465790465582, guid: 0523746569809be429261b4362a05443,
         type: 3}
@@ -11724,6 +11711,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748964465790465580, guid: 0523746569809be429261b4362a05443,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0523746569809be429261b4362a05443, type: 3}
