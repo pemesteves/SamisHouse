@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 8614293916841348193}
   - component: {fileID: 8614293916841348198}
   - component: {fileID: 8614293916841348199}
-  - component: {fileID: 8614293916841348192}
   m_Layer: 5
   m_Name: 'Level '
   m_TagString: Untagged
@@ -283,20 +282,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: LEVEL 0
---- !u!114 &8614293916841348192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8614293916841348194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ef4e3179bdade4c9f1050f3361bda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: {fileID: 0}
-  keys: {fileID: 0}
 --- !u!1 &8614293916994424580
 GameObject:
   m_ObjectHideFlags: 0
