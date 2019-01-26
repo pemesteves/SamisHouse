@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float left_wall = -18f;
+    public float left_wall;
+    public float right_wall;
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
     public UI_game UI;
+    //Animator anim = Animator.GetComponent<Animator>();
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (transform.position.x < left_wall)
             transform.position = new Vector3(left_wall, transform.position.y, transform.position.z);
+
+        if (transform.position.x > right_wall)
+            transform.position = new Vector3(right_wall, transform.position.y, transform.position.z);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             startJump = false;
         }
-        else if(obj.layer == LayerDetection.water)
+        else if (obj.layer == LayerDetection.water)
         {
             Destroy(this.gameObject);
         }
@@ -79,18 +84,31 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (layer == LayerDetection.key)
+       /* else if (layer == LayerDetection.key)
         {
             can_get_key = true;
+        }*/
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
+        {
+            GameObject obj = GameObject.FindGameObjectWithTag("Key");
+            if (obj != null)
+            {
+                Destroy(obj);
+                UI.Update_number_keys();
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        int layer = collision.gameObject.layer;
-        if(layer == LayerDetection.key)
+      /*  int layer = collision.gameObject.layer;
+        if (layer == LayerDetection.key)
         {
             can_get_key = false;
-        }
+        }*/
     }
 }

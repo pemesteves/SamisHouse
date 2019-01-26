@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   left_wall: -16.5
+  right_wall: 53.5
+  UI: {fileID: 0}
 --- !u!50 &4743530321291387515
 Rigidbody2D:
   serializedVersion: 4
