@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         }
         else if(obj.layer == LayerDetection.water)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
