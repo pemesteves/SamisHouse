@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float left_wall = -18f;
+    public float left_wall;
+    public float right_wall;
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
@@ -57,6 +58,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (transform.position.x < left_wall)
             transform.position = new Vector3(left_wall, transform.position.y, transform.position.z);
+
+        if (transform.position.x > right_wall)
+            transform.position = new Vector3(right_wall, transform.position.y, transform.position.z);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
