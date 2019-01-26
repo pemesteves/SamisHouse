@@ -6,11 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public float left_wall;
     public float right_wall;
+    public float climb_speed = 1;
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
     private UI_game UI;
     private Animator anim;
+
+    private bool colliding = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) //Saltar
+        if (Input.GetKeyDown(KeyCode.W) && !colliding) //Saltar
         {
             if (!startJump)
             {
@@ -114,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        colliding = true;
+
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
@@ -126,13 +131,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
         {
-            transform.Translate(0f, 0.5f, 0f);
+            transform.Translate(0f, 0.1f * climb_speed, 0f);
+            this.GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
+        if (Input.GetKey(KeyCode.S) && other.gameObject.layer == LayerDetection.climbable)
+        {
+            transform.Translate(0f, -0.1f * climb_speed, 0f);
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        colliding = false;
+
         if(collision.gameObject.layer == LayerDetection.climbable)
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 4;
