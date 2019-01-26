@@ -117,7 +117,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        colliding = true;
+        if (other.gameObject.transform.tag != "Key")
+            colliding = true;
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
         {
@@ -131,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
         {
+            rigidBody.velocity = Vector3.zero;
             transform.Translate(0f, 0.1f * climb_speed, 0f);
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
         }
