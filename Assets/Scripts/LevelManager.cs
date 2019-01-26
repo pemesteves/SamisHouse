@@ -19,4 +19,9 @@ public class LevelManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void DisableWater()
+    {
+
+    }
+
 }
