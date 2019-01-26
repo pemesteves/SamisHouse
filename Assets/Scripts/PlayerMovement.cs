@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
-    public UI_game UI;
+    private UI_game UI;
     private Animator anim;
 
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody = this.GetComponent<Rigidbody2D>();
         can_get_key = false;
         anim = gameObject.GetComponentInChildren<Animator>();
+        UI = GameObject.FindObjectOfType<UI_game>();
     }
 
     // Update is called once per frame
@@ -29,25 +30,46 @@ public class PlayerMovement : MonoBehaviour
             if (!startJump)
             {
                 startJump = true;
+                anim.SetTrigger("jump");
                 rigidBody.AddForce(Vector2.up * 500);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.S)) //Baixar
         {
-
+            anim.SetTrigger("crouch");
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            anim.SetTrigger("not_crouch");
         }
 
         if (Input.GetKey(KeyCode.D)) //Andar para a direita
+        {   
+            transform.Translate(.1f, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
         {
             anim.SetTrigger("walk");
-            transform.Translate(.1f, 0, 0);
+            this.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            anim.SetTrigger("not_walk");
         }
 
         if (Input.GetKey(KeyCode.A)) //Andar para a esquerda
         {
-            anim.SetTrigger("walk");
             transform.Translate(-.1f, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            anim.SetTrigger("walk");
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            anim.SetTrigger("not_walk");
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
@@ -73,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         if (obj.layer == LayerDetection.ground || obj.layer == LayerDetection.crate)
         {
             startJump = false;
+            anim.SetTrigger("reach_ground");
         }
         else if (obj.layer == LayerDetection.water)
         {
@@ -87,15 +110,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-       /* else if (layer == LayerDetection.key)
-        {
-            can_get_key = true;
-        }*/
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
+        if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
             if (obj != null)
@@ -108,15 +127,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
         {
             transform.Translate(0f, 0.5f, 0f);
+            this.GetComponent<Rigidbody2D>().gravityScale = 0;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-      /*  int layer = collision.gameObject.layer;
-        if (layer == LayerDetection.key)
+        if(collision.gameObject.layer == LayerDetection.climbable)
         {
-            can_get_key = false;
-        }*/
+            this.GetComponent<Rigidbody2D>().gravityScale = 4;
+        }
     }
 }
