@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float left_wall;
     public float right_wall;
     public float climb_speed = 1;
+
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     private bool colliding = false;
+    private bool grounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -103,6 +105,24 @@ public class PlayerMovement : MonoBehaviour
         else if (obj.layer == LayerDetection.water)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerDetection.ground)
+        {
+            rigidBody.gravityScale = 0.1f;
+            grounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (grounded)
+        {
+            grounded = false;
+            rigidBody.gravityScale = 4f;
         }
     }
 
