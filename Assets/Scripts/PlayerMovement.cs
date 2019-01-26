@@ -148,7 +148,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>() && other.gameObject.transform.tag != "Crank")
             colliding = true;
-
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
