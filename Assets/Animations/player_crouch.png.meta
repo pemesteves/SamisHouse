@@ -1,7 +1,71 @@
 fileFormatVersion: 2
 guid: 3fa0a752d50cde24181441df03f57378
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: player_crouch_0
+    21300002: player_crouch_1
+    21300004: player_crouch_2
+    21300006: player_crouch_3
+    21300008: player_crouch_4
+    21300010: player_crouch_5
+    21300012: player_crouch_6
+    21300014: player_crouch_7
+    21300016: player_crouch_8
+    21300018: player_crouch_9
+    21300020: player_crouch_10
+    21300022: player_crouch_11
+    21300024: player_crouch_12
+    21300026: player_crouch_13
+    21300028: player_crouch_14
+    21300030: player_crouch_15
+    21300032: player_crouch_16
+    21300034: player_crouch_17
+    21300036: player_crouch_18
+    21300038: player_crouch_19
+    21300040: player_crouch_20
+    21300042: player_crouch_21
+    21300044: player_crouch_22
+    21300046: player_crouch_23
+    21300048: player_crouch_24
+    21300050: player_crouch_25
+    21300052: player_crouch_26
+    21300054: player_crouch_27
+    21300056: player_crouch_28
+    21300058: player_crouch_29
+    21300060: player_crouch_30
+    21300062: player_crouch_31
+    21300064: player_crouch_32
+    21300066: player_crouch_33
+    21300068: player_crouch_34
+    21300070: player_crouch_35
+    21300072: player_crouch_36
+    21300074: player_crouch_37
+    21300076: player_crouch_38
+    21300078: player_crouch_39
+    21300080: player_crouch_40
+    21300082: player_crouch_41
+    21300084: player_crouch_42
+    21300086: player_crouch_43
+    21300088: player_crouch_44
+    21300090: player_crouch_45
+    21300092: player_crouch_46
+    21300094: player_crouch_47
+    21300096: player_crouch_48
+    21300098: player_crouch_49
+    21300100: player_crouch_50
+    21300102: player_crouch_51
+    21300104: player_crouch_52
+    21300106: player_crouch_53
+    21300108: player_crouch_54
+    21300110: player_crouch_55
+    21300112: player_crouch_56
+    21300114: player_crouch_57
+    21300116: player_crouch_58
+    21300118: player_crouch_59
+    21300120: player_crouch_60
+    21300122: player_crouch_61
+    21300124: player_crouch_62
+    21300126: player_crouch_63
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +133,1300 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: player_crouch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14115
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485197bfd01add045a748958d61001f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_1
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 14115
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674e3326cc0c9e243822004bbbbf1365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_2
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 14115
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e67db7f78f10844bf2f806505156ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_3
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 14115
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a3c609bf1803b4a973d1e2be4bfbe7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13174
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b30303982daf84d986396190e6a172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_5
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 13174
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7f5327a6e65de43bc25ea38cf6b169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_6
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 13174
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dc810781b644e42a9bed437bab606a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_7
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 13174
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf7e7834677e9746a78717a532e1390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12233
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e08858caf497ff4bab81e0f132dcd2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_9
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 12233
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85eb4e186ba525e41b1442e10800cfe8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_10
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 12233
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352da58c46614414e92643c59bc6a1bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_11
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 12233
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24eceb0b911d2a5418022de3ee8ac39b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11292
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1c2bd6fd9d1404da00f3fda94ecebf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_13
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 11292
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26f2f68ef50f37498aafc5bba53faf0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_14
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 11292
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98984a5208855d8479a0ffc2e3a91d9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_15
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 11292
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22672fc7d561ee44ba1a5e83cd9e849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10351
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e20319a9b725545a6be66440661656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_17
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 10351
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af312f8226e8b904fad47b53ca8dea44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_18
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 10351
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d789e0b53826744a616f39da3b5f8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_19
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 10351
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80259d9146c31be4580a65f177e14f7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9410
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f008b6d4929454db3f342aa35c7a92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_21
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 9410
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37bc8fc32c922a4a848fc336092541a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_22
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 9410
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b200f1b7d19ac204c8eb8c49836c6757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_23
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 9410
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736126fda131d7149a10037212469e6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8469
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fc4337b4e89fd4e8553b7c8b42c46d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_25
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 8469
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd4de4275b04d64380bce2b46783eb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_26
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 8469
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6d447baf6a18142af780c72acacbdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_27
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 8469
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b16fc56bcc8764895486030c760235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7528
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf82deb9a3aa7354bad38d7f77be4897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_29
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 7528
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddca3a72184eaae46bf1cb8c5013c73f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_30
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 7528
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7cbcb4f9071bd44814b8c34efb2a50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_31
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 7528
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7b40bf16aa3a441a575b2fdc11e336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6587
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9825fc7ddc4f8469094d1726373b1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_33
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 6587
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa7f664678df644484e917d2c5993e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_34
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 6587
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4356b3a0ee8a8240a5a22afe07ff6af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_35
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 6587
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6368f87e1ce2c843a7c3a5bc9cb60d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5646
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0080449e8533c2646b56d66a7d53c212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_37
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 5646
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0429428370efb41898536fb10941a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_38
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 5646
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3757af17930fb04468981e3c00307320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_39
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 5646
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4819cf7a7597b24c8bb6a416c503bd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4705
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35dbc59c971d0d645ad7120e9d8791cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_41
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 4705
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f5784fa58f9214e8c643d5a600e759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_42
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 4705
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e2c81eeafdc6640af0c88b2bd4da9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_43
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 4705
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5953eedfc4bf7fe47a01220950255be3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3764
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c72d3c33b8ed134caa96da83c20bf70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_45
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 3764
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee936e048ab689642b5199193af16f6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_46
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 3764
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3879c5f3527be504186ac86830c35fd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_47
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 3764
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e00103c85d31514a8312edcb4c08748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2823
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688a41ad39b37e94caf6a43d884fd503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_49
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 2823
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8433017a3e3764090b058acae7535a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_50
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2823
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87802beff60826a44b3b3aaeb7c9de70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_51
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 2823
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2698135a78f95fa4ea2f4b13274083c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1882
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2e0c350c2723c48a7c868aaac3a88a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_53
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1882
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726224afa04f732468dee5efd56223eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_54
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1882
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedb60f6479fad94487b6be0625899b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_55
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 1882
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd615801091ac744baebb88bdbc1020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 941
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8335702d40087c54587b934d45b21e40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_57
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 941
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb1fc9f14ddad34aba0deb5ceee3515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_58
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 941
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98de3b983f81e5a4781691e7b96e80f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_59
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 941
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd187b4fd2a39b409e544a7fd4c2a09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4250849e0cd1e43935b7a0fea82ee7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_61
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 0
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8792170ba2867a941aeb2a59dacf30ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_62
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 0
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7914dc393ff87848a291f0ba429480a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_crouch_63
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 0
+        width: 757
+        height: 941
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09b52ee0580cc24a9d187b306ea1da9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
