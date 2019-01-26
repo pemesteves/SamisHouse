@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private bool startJump;
     private Rigidbody2D rigidBody;
     private bool can_get_key;
-    public UI_game UI;
+    private UI_game UI;
     private Animator anim;
     private bool flip;
 
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody = this.GetComponent<Rigidbody2D>();
         can_get_key = false;
         anim = gameObject.GetComponentInChildren<Animator>();
-        flip = false;
+        UI = GameObject.FindObjectOfType<UI_game>();
     }
 
     // Update is called once per frame
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
+        if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
             if (obj != null)
