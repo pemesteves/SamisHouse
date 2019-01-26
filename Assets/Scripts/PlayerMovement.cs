@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
     private bool can_get_key;
     public UI_game UI;
+    //Animator anim = Animator.GetComponent<Animator>();
 
     // Start is called before the first frame update
     void Start()
