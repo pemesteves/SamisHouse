@@ -6,38 +6,30 @@ public class Player : MonoBehaviour
 {
     private bool startJump;
     private Rigidbody2D rigidBody;
-    private float jumpInitialPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        startJump = false;
+        startJump = true;
         rigidBody = this.GetComponent<Rigidbody2D>();
-        jumpInitialPosition = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (transform.position.y <= jumpInitialPosition)
-        {
-            startJump = false;
-        }
-
         if (Input.GetKeyDown(KeyCode.W)) //Saltar
         {
             if (!startJump)
             {
+                Debug.Log("Jump");
                 startJump = true;
-                jumpInitialPosition = transform.position.y;
-                rigidBody.AddForce(Vector2.up * 300f);
+                rigidBody.AddForce(Vector2.up * 500);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.S)) //Baixar
         {
-            rigidBody.AddForce(-Vector2.up * 300f);
+
         }
 
         if (Input.GetKey(KeyCode.D)) //Andar para a direita
@@ -56,4 +48,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision");
+        GameObject obj = collision.gameObject;
+        if (obj.layer == LayerDetection.ground)
+        {
+            startJump = false;
+        }
+    }
 }
