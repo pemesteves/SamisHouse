@@ -120,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.gravityScale = 0.1f;
             grounded = true;
+            startJump = false;
         }
     }
 
