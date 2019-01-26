@@ -611,9 +611,10 @@ GameObject:
   - component: {fileID: 787129875}
   - component: {fileID: 787129874}
   - component: {fileID: 787129876}
+  - component: {fileID: 787129877}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -719,6 +720,18 @@ PolygonCollider2D:
       - {x: 0.13, y: -0.51}
       - {x: 0.31, y: -0.22999999}
       - {x: 0.21, y: -0.02}
+--- !u!114 &787129877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787129873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf778df956ba1e46aab0287a04654cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886646420
 GameObject:
   m_ObjectHideFlags: 0
@@ -10828,7 +10841,7 @@ GameObject:
   - component: {fileID: 1531354328}
   - component: {fileID: 1531354327}
   - component: {fileID: 1531354329}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11574,7 +11587,7 @@ PrefabInstance:
     - target: {fileID: 2553041772699988833, guid: c6bef29ad0ad8854eacedbf93ece4101,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2553041772699988833, guid: c6bef29ad0ad8854eacedbf93ece4101,
         type: 3}
