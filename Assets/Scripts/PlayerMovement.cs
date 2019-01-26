@@ -93,9 +93,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
         {
-            GameObject obj = GameObject.FindGameObjectWithTag("key");
-            Destroy(obj);
-            UI.Update_number_keys();
+            GameObject obj = GameObject.FindGameObjectWithTag("Key");
+            if (obj != null)
+            {
+                Destroy(obj);
+                UI.Update_number_keys();
+            }
         }
     }
 

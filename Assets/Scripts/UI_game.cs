@@ -16,7 +16,7 @@ public class UI_game : MonoBehaviour
     void Start()
     {
         level_number = SceneManager.GetActiveScene().buildIndex;
-        level.text = "LEVEL " + level_number;
+        level.text = "LEVEL " + level_number.ToString();
         number_keys = 0;
         keys.text = "= " + number_keys;
     }
