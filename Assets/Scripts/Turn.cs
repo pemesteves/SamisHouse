@@ -5,13 +5,16 @@ using UnityEngine;
 public class Turn : MonoBehaviour
 {
     public Sprite[] crank_img;
-    private bool is_down = true;
+    public bool down = true;
     private SpriteRenderer img;
+
+    private GameObject water;
 
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<SpriteRenderer>();
+        water = GameObject.Find("water");
     }
 
     // Update is called once per frame
@@ -24,16 +27,13 @@ public class Turn : MonoBehaviour
     {
         if (other.gameObject.transform.tag == "Player" && Input.GetKeyDown(KeyCode.LeftControl))
         {
-            if (is_down)
+            if (down)
             {
-                is_down = false;
+                down = false;
                 img.sprite = crank_img[1];
-            }
-            else
-            {
-                is_down = true;
-                img.sprite = crank_img[0];
+                Destroy(water);
             }
         }
     }
+
 }
