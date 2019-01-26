@@ -16,9 +16,8 @@ TagManager:
   - Ground
   - Crate
   - 
-  - 
+  - destroy_player_trigger
   - water
-  - 
   - 
   - 
   - 

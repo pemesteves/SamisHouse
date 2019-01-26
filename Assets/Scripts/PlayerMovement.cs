@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+    public float left_wall = -18f;
     private bool startJump;
     private Rigidbody2D rigidBody;
 
@@ -45,6 +46,9 @@ public class Player : MonoBehaviour
         {
 
         }
+
+        if (transform.position.x < left_wall)
+            transform.position = new Vector3(left_wall, transform.position.y, transform.position.z);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,6 +61,14 @@ public class Player : MonoBehaviour
         else if(obj.layer == LayerDetection.water)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.layer == LayerDetection.destroy_player_trigger)
+        {
+            Destroy(gameObject);
         }
     }
 }
