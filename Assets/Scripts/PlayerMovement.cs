@@ -104,6 +104,11 @@ public class PlayerMovement : MonoBehaviour
                 UI.Update_number_keys();
             }
         }
+
+        if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
+        {
+            transform.Translate(0f, 0.5f, 0f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
