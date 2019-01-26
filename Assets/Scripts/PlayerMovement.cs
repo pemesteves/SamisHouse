@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     private bool can_get_key;
     private UI_game UI;
     private Animator anim;
-    private bool flip;
 
     // Start is called before the first frame update
     void Start()
