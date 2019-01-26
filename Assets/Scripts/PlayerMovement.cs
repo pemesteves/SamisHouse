@@ -156,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
                 UI.Update_number_keys();
             }
         }
+        /*
         else if(Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Crank")
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Crank");
@@ -164,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
                 Animator crank_anim = obj.GetComponent<Animator>();
                 crank_anim.SetTrigger("Interact");
             }
-        }
+        }*/
 
         if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
         {
