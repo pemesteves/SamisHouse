@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
     private bool can_get_key;
     public UI_game UI;
-    //Animator anim = Animator.GetComponent<Animator>();
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         startJump = false;
         rigidBody = this.GetComponent<Rigidbody2D>();
         can_get_key = false;
+        anim = gameObject.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -39,11 +40,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D)) //Andar para a direita
         {
+            anim.SetTrigger("walk");
             transform.Translate(.1f, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.A)) //Andar para a esquerda
         {
+            anim.SetTrigger("walk");
             transform.Translate(-.1f, 0, 0);
         }
 
