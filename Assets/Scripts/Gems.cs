@@ -5,14 +5,18 @@ using UnityEngine;
 public class Gems : MonoBehaviour
 {
     public Sprite[] gem_img;
-    private bool is_on = false;
+    public bool is_on = false;
     private SpriteRenderer img;
 
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<SpriteRenderer>();
-        img.sprite = gem_img[0];
+        if (!is_on)
+            img.sprite = gem_img[0];
+        else
+            img.sprite = gem_img[1];
+
     }
 
     // Update is called once per frame
