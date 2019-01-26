@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             startJump = false;
         }
-        else if(obj.layer == LayerDetection.water)
+        else if (obj.layer == LayerDetection.water)
         {
             Destroy(this.gameObject);
         }
@@ -79,18 +79,28 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (layer == LayerDetection.key)
+       /* else if (layer == LayerDetection.key)
         {
             can_get_key = true;
+        }*/
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
+        {
+            GameObject obj = GameObject.FindGameObjectWithTag("key");
+            Destroy(obj);
+            UI.Update_number_keys();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        int layer = collision.gameObject.layer;
-        if(layer == LayerDetection.key)
+      /*  int layer = collision.gameObject.layer;
+        if (layer == LayerDetection.key)
         {
             can_get_key = false;
-        }
+        }*/
     }
 }
