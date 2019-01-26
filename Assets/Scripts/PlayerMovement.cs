@@ -50,8 +50,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.D)) //Andar para a direita
-        {   
-            transform.Translate(.1f, 0, 0);
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+                transform.Translate(.15f, 0, 0);
+            else
+                transform.Translate(.1f, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -65,7 +68,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A)) //Andar para a esquerda
         {
-            transform.Translate(-.1f, 0, 0);
+            if (Input.GetKey(KeyCode.LeftShift))
+                transform.Translate(-.15f, 0, 0);
+            else
+                transform.Translate(-.1f, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -137,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.transform.tag != "Key")
+        if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>())
             colliding = true;
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
