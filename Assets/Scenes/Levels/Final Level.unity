@@ -385,8 +385,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Freddie! I\u2019ve missed you so much! \nThank you so much for your help,
-    I\u2019m finally home, I could\u2019ve never gotten so far on my own. \nNow I
-    can be happy, in this place I treasure most! "
+    I\u2019m finally home, \nI could\u2019ve never gotten so far on my own. \nNow
+    I can be happy, in this place I treasure most! "
 --- !u!222 &425437981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2379,7 +2379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -178.5}
+  m_AnchoredPosition: {x: 1, y: -166}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963902300
@@ -2422,10 +2422,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
-    m_Right: 20
-    m_Top: 10
-    m_Bottom: 10
+    m_Left: 100
+    m_Right: 100
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1

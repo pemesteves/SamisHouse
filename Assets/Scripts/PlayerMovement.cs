@@ -71,117 +71,132 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (jumping)
+        if (walk_r)
         {
             if (Input.GetKey(KeyCode.D))
             {
+                if (!jumping)
+                    anim.SetTrigger("walk");
+
                 if (Input.GetKey(KeyCode.LeftShift))
                     transform.Translate(.15f, 0, 0);
                 else
                     transform.Translate(.1f, 0, 0);
             }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                if (Input.GetKey(KeyCode.LeftShift))
-                    transform.Translate(-.15f, 0, 0);
-                else
-                    transform.Translate(-.1f, 0, 0);
-            }
-
-            if (Input.GetKeyUp(KeyCode.D))
+            else if (Input.GetKey(KeyCode.A))
             {
                 walk_r = false;
-                anim.ResetTrigger("walk");
-                anim.SetTrigger("not_walk");
-            }
-
-            if (Input.GetKeyUp(KeyCode.A))
-            {
-                walk_l = false;
-                anim.ResetTrigger("walk");
-                anim.SetTrigger("not_walk");
-            }
-        }
-
-        if (walk_r && !jumping)
-        {
-            if (Input.GetKey(KeyCode.D))
-            {
-                anim.SetTrigger("walk");
-                if (Input.GetKey(KeyCode.LeftShift))
-                    transform.Translate(.15f, 0, 0);
-                else
-                    transform.Translate(.1f, 0, 0);
-            }
-
-            if (Input.GetKeyUp(KeyCode.D))
-            {
-                walk_r = false;
-                anim.ResetTrigger("walk");
-                anim.SetTrigger("not_walk");
-            }
-
-            if (Input.GetKey(KeyCode.W))
-            {
-                startJump = true;
-                jumping = true;
-                anim.SetTrigger("jump");
-                rigidBody.AddForce(Vector2.up * 500);
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
                 walk_l = true;
-                walk_r = false;
-                anim.SetTrigger("walk");
                 this.GetComponent<SpriteRenderer>().flipX = true;
-                if (Input.GetKey(KeyCode.D))
+            }
+
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                walk_r = false;
+                if (!jumping)
                 {
-                    walk_l = false;
-                    anim.SetTrigger("not_walk");
-                    anim.ResetTrigger("walk");
+                    if (!Input.GetKey(KeyCode.A))
+                    {
+                        anim.ResetTrigger("walk");
+                        anim.SetTrigger("not_walk");
+                    }
+                }
+            }
+
+            if (!jumping)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    startJump = true;
+                    jumping = true;
+                    anim.SetTrigger("jump");
+                    rigidBody.AddForce(Vector2.up * 500);
                 }
             }
         }
 
-        if (walk_l && !jumping)
+        if (walk_l)
         {
             if (Input.GetKey(KeyCode.A))
             {
-                anim.SetTrigger("walk");
+                if (!jumping)
+                    anim.SetTrigger("walk");
+
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(-.15f, 0, 0);
+                else
+                    transform.Translate(-.1f, 0, 0);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                walk_r = true;
+                walk_l = false;
+                this.GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                walk_l = false;
+                if (!jumping)
+                {
+                    if (!Input.GetKey(KeyCode.D))
+                    {
+                        anim.ResetTrigger("walk");
+                        anim.SetTrigger("not_walk");
+                    }
+                }
+            }
+
+            if (!jumping)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    startJump = true;
+                    jumping = true;
+                    anim.SetTrigger("jump");
+                    rigidBody.AddForce(Vector2.up * 500);
+                }
+            }
+        }
+
+        if (!walk_r && !walk_l)
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (!jumping)
+                    anim.SetTrigger("walk");
+
+                walk_l = true;
+                this.GetComponent<SpriteRenderer>().flipX = true;
+
                 if (Input.GetKey(KeyCode.LeftShift))
                     transform.Translate(-.15f, 0, 0);
                 else
                     transform.Translate(-.1f, 0, 0);
             }
 
-            if (Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKey(KeyCode.D))
             {
-                walk_l = false;
-                anim.ResetTrigger("walk");
-                anim.SetTrigger("not_walk");
-            }
+                if (!jumping)
+                    anim.SetTrigger("walk");
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                startJump = true;
-                jumping = true;
-                anim.SetTrigger("jump");
-                rigidBody.AddForce(Vector2.up * 500);
-            }
-
-            if (Input.GetKeyDown(KeyCode.D))
-            {
                 walk_r = true;
-                walk_l = false;
-                anim.SetTrigger("walk");
                 this.GetComponent<SpriteRenderer>().flipX = false;
-                if (Input.GetKey(KeyCode.A))
+
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(.15f, 0, 0);
+                else
+                    transform.Translate(.1f, 0, 0);
+            }
+
+            if (!jumping)
+            {
+                if (Input.GetKey(KeyCode.W))
                 {
-                    walk_r = false;
-                    anim.SetTrigger("not_walk");
-                    anim.ResetTrigger("walk");
+                    startJump = true;
+                    jumping = true;
+                    anim.SetTrigger("jump");
+                    rigidBody.AddForce(Vector2.up * 500);
                 }
             }
         }
@@ -297,7 +312,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
+        if (other.gameObject.layer == LayerDetection.climbable)
         {
             anim.ResetTrigger("walk");
             anim.ResetTrigger("jump");
@@ -305,17 +320,29 @@ public class PlayerMovement : MonoBehaviour
             anim.ResetTrigger("interact");
             anim.SetBool("climb", true);
             this.GetComponent<SpriteRenderer>().flipX = false;
-
-
             rigidBody.velocity = Vector3.zero;
-            transform.Translate(0f, 0.1f * climb_speed, 0f);
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+            if (Input.GetKey(KeyCode.W))
+                transform.Translate(0f, 0.1f * climb_speed, 0f);
+
+            if (Input.GetKey(KeyCode.S))
+                transform.Translate(0f, -0.1f * climb_speed, 0f);
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                walk_r = true;
+                walk_l = false;
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                walk_l = true;
+                walk_r = false;
+            }
+
         }
-        if (Input.GetKey(KeyCode.S) && other.gameObject.layer == LayerDetection.climbable)
-        {
-            transform.Translate(0f, -0.1f * climb_speed, 0f);
-            this.GetComponent<Rigidbody2D>().gravityScale = 0;
-        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -326,6 +353,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("climb", false);
             this.GetComponent<Rigidbody2D>().gravityScale = 4;
+            this.GetComponent<SpriteRenderer>().flipX = walk_l ? true : false;
         }
     }
 
