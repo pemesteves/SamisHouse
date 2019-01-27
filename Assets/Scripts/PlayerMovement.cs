@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool colliding = false;
     private bool grounded = false;
-    
+
     private bool jumping = false;
     private bool walk_r = false;
     private bool walk_l = false;
@@ -40,42 +40,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!jumping && !walk_r && !walk_l && !crouch && !climb)
-        {
-            if (Input.GetKeyDown(KeyCode.W)) //Saltar
-            {
-                startJump = true;
-                jumping = true;
-                anim.SetTrigger("jump");
-                rigidBody.AddForce(Vector2.up * 500);
-            }
-
-            if (Input.GetKeyDown(KeyCode.S)) //Baixar
-            {
-                crouch = true;
-                anim.SetTrigger("crouch");
-            }
-
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                walk_r = true;
-                anim.SetTrigger("walk");
-                this.GetComponent<SpriteRenderer>().flipX = false;
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                walk_l = true;
-                anim.SetTrigger("walk");
-                this.GetComponent<SpriteRenderer>().flipX = true;
-            }
-        }
-
         if (walk_r)
         {
             if (Input.GetKey(KeyCode.D))
             {
-                if (!jumping)
+                if (!jumping && !crouch)
                     anim.SetTrigger("walk");
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -95,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
                 walk_r = false;
                 if (!jumping)
                 {
-                    if (!Input.GetKey(KeyCode.A))
+                    if (!Input.GetKey(KeyCode.A) && !crouch)
                     {
                         anim.ResetTrigger("walk");
                         anim.SetTrigger("not_walk");
@@ -112,6 +81,12 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetTrigger("jump");
                     rigidBody.AddForce(Vector2.up * 500);
                 }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    crouch = true;
+                    anim.SetTrigger("crouch");
+                }
             }
         }
 
@@ -119,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                if (!jumping)
+                if (!jumping && !crouch)
                     anim.SetTrigger("walk");
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -139,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
                 walk_l = false;
                 if (!jumping)
                 {
-                    if (!Input.GetKey(KeyCode.D))
+                    if (!Input.GetKey(KeyCode.D) && !crouch)
                     {
                         anim.ResetTrigger("walk");
                         anim.SetTrigger("not_walk");
@@ -156,6 +131,12 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetTrigger("jump");
                     rigidBody.AddForce(Vector2.up * 500);
                 }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    crouch = true;
+                    anim.SetTrigger("crouch");
+                }
             }
         }
 
@@ -163,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                if (!jumping)
+                if (!jumping && !crouch)
                     anim.SetTrigger("walk");
 
                 walk_l = true;
@@ -177,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.D))
             {
-                if (!jumping)
+                if (!jumping && !crouch)
                     anim.SetTrigger("walk");
 
                 walk_r = true;
@@ -198,35 +179,20 @@ public class PlayerMovement : MonoBehaviour
                     anim.SetTrigger("jump");
                     rigidBody.AddForce(Vector2.up * 500);
                 }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    crouch = true;
+                    anim.SetTrigger("crouch");
+                }
             }
         }
 
-        if (crouch)
+        if (Input.GetKeyUp(KeyCode.S))
         {
-            if (Input.GetKey(KeyCode.D))
-            {
-                this.GetComponent<SpriteRenderer>().flipX = false;
-                if (Input.GetKey(KeyCode.LeftShift))
-                    transform.Translate(.15f, 0, 0);
-                else
-                    transform.Translate(.1f, 0, 0);
-            }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                this.GetComponent<SpriteRenderer>().flipX = true;
-                if (Input.GetKey(KeyCode.LeftShift))
-                    transform.Translate(-.15f, 0, 0);
-                else
-                    transform.Translate(-.1f, 0, 0);
-            }
-
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                anim.SetTrigger("not_crouch");
-                anim.ResetTrigger("crouch");
-                crouch = false;
-            }
+            crouch = false;
+            anim.ResetTrigger("crouch");
+            anim.SetTrigger("not_crouch");
         }
 
         if (transform.position.x < left_wall)
@@ -242,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
         if (obj.layer == LayerDetection.ground || obj.layer == LayerDetection.crate)
         {
             startJump = false;
-            anim.SetTrigger("reach_ground");    
+            anim.SetTrigger("reach_ground");
             anim.ResetTrigger("jump");
             jumping = false;
 
