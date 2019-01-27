@@ -3098,7 +3098,7 @@ PrefabInstance:
     - target: {fileID: 4743530321291387514, guid: 81dc40a493fbfdc4390cf793790017a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.64
+      value: 22.91
       objectReference: {fileID: 0}
     - target: {fileID: 4743530321291387514, guid: 81dc40a493fbfdc4390cf793790017a0,
         type: 3}
@@ -3312,6 +3312,8 @@ GameObject:
   - component: {fileID: 669917195}
   - component: {fileID: 669917197}
   - component: {fileID: 669917196}
+  - component: {fileID: 669917198}
+  - component: {fileID: 669917199}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -3591,6 +3593,33 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &669917198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669917194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203dd9545e5c10a468ad341b7e3aa044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_level: Level 6
+--- !u!19719996 &669917199
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669917194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
 --- !u!1001 &729994392
 PrefabInstance:
   m_ObjectHideFlags: 0
