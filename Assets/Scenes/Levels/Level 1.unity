@@ -43098,9 +43098,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "There once was a house. In this house lived a boy. His name was Samuel.\nBut
+  m_Text: "<i>There once was a house. In this house lived a boy. His name was Samuel.\nBut
     little Sami was unlike most other boys.  He could sense and see things others
-    could not. \nThis probably being the leading cause of his descent into madness..."
+    could not. \nThis probably being the leading cause of his descent into madness...</i>"
 --- !u!222 &1441064630
 CanvasRenderer:
   m_ObjectHideFlags: 0
