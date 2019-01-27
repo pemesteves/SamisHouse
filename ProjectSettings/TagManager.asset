@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - Crank
+  - Player Lives
   layers:
   - Default
   - TransparentFX
