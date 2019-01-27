@@ -273,10 +273,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8614293916994424587, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614293916841348193, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888239414995315271, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6630442792379611368, guid: 7b2b8b858538a244490cd176176c50e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5535687136080210671, guid: 7b2b8b858538a244490cd176176c50e0,
         type: 3}
@@ -385,8 +400,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Freddie! I\u2019ve missed you so much! \nThank you so much for your help,
-    I\u2019m finally home, \nI could\u2019ve never gotten so far on my own. \nNow
-    I can be happy, in this place I treasure most! "
+    I\u2019m finally home, I could\u2019ve never gotten so far on my own. \nNow I
+    can be happy, in this place I treasure most! "
 --- !u!222 &425437981
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -480,6 +495,8 @@ GameObject:
   - component: {fileID: 553047109}
   - component: {fileID: 553047108}
   - component: {fileID: 553047107}
+  - component: {fileID: 553047110}
+  - component: {fileID: 553047111}
   m_Layer: 0
   m_Name: cat1
   m_TagString: Untagged
@@ -568,6 +585,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &553047110
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553047106}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.44, y: 0.21}
+    newSize: {x: 0.44, y: 0.21}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.44, y: 0.21}
+  m_EdgeRadius: 0
+--- !u!114 &553047111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553047106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ad669b6c5bee4448b0ce923da2d535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592536056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,11 +2499,11 @@ RectTransform:
   m_Children:
   - {fileID: 425437978}
   m_Father: {fileID: 1787464124}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -166}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 1, y: 64}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963902300
