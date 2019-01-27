@@ -6652,10 +6652,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "-This is the game room\u2026 \nI remember having so much fun here with
-    mommy and daddy, before they put me away in the basement\u2026\nI know I said
-    we need to get to the attic as fast as we can, but can you please play this game
-    with me?"
+  m_Text: "This is the game room\u2026 \nI remember having so much fun here with mommy
+    and daddy, before they put me away in the basement\u2026\nI know I said we need
+    to get to the attic as fast as we can, but can you please play this game with
+    me?"
 --- !u!222 &760641449
 CanvasRenderer:
   m_ObjectHideFlags: 0
