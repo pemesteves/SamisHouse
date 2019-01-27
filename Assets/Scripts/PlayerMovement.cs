@@ -290,10 +290,10 @@ public class PlayerMovement : MonoBehaviour
             if (obj != null)
             {
                 audioManager.play_key_pickup();
-                obj.GetComponent<PolygonCollider2D>().enabled = false;
-                //Destroy(obj);
-                //UI.Update_number_keys();
-                StartCoroutine(MoveKey(obj));
+                //obj.GetComponent<PolygonCollider2D>().enabled = false;
+                Destroy(obj);
+                UI.Update_number_keys();
+                //StartCoroutine(MoveKey(obj));
             }
         }
 
@@ -343,24 +343,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator MoveKey(GameObject obj)
+    /*IEnumerator MoveKey(GameObject obj)
     {
         while (true)
         {
-            var worldPoint = Camera.main.ScreenToWorldPoint(new Vector3( UI.keys.transform.position.x, UI.keys.transform.position.y, 0));
+            var worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(UI.keys.transform.position.x - UI.keys.minWidth, UI.keys.transform.position.y - UI.keys.minHeight, 0));
 
 
             obj.transform.position = Vector3.Lerp(obj.transform.position, worldPoint, 2 * Time.deltaTime);
 
             if((worldPoint - obj.transform.position).magnitude < 1)
             {
-                UI.Update_number_keys();
-                Destroy(obj);
                 obj.GetComponent<PolygonCollider2D>().enabled = true;
                 yield break;
             }
 
             yield return null;
         }
-    }
+    }*/
 }
