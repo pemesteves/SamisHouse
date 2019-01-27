@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public int lives { get; set; }
 
     public void loadLevel(string level)
     {
@@ -20,7 +19,6 @@ public class LevelManager : MonoBehaviour
     
     public void loadMenu()
     {
-        Destroy(this);
         loadLevel("Menu");
     }
 

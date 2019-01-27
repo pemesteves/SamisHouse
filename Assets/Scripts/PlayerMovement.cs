@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private AudioManager audioManager;
     private LevelManager levelManager;
+    private PlayerLives player_lives;
 
     public bool colliding = false;
     private bool grounded = false;
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         UI = GameObject.FindObjectOfType<UI_game>();
         audioManager = GameObject.FindObjectOfType<AudioManager>();
         levelManager = GameObject.FindObjectOfType<LevelManager>();
+        player_lives = GameObject.FindObjectOfType<PlayerLives>();
     }
 
     // Update is called once per frame
@@ -286,13 +288,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateLives()
     {
-        Debug.Log(levelManager.lives);
-        levelManager.lives--;
-        Debug.Log(levelManager.lives);
-        if (levelManager.lives <= 0)
+        player_lives.decrement_lives();
+        if (player_lives.is_player_dead())
         {
-            //DEAD!!!!!
-
+            player_lives.recover_full_health();
+            levelManager.loadMenu();
         }
         else
         {
