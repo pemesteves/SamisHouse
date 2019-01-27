@@ -327,7 +327,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void UpdateLives()
+    public void UpdateLives()
     {
         player_lives.decrement_lives();
         if (player_lives.is_player_dead())
