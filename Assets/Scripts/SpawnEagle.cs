@@ -27,7 +27,7 @@ public class SpawnEagle : MonoBehaviour
 
                 Invoke("spawn_eagle", 1);
             }
-        }       
+        }
     }
 
     private void spawn_eagle()
