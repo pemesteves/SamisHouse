@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public LevelManager l_manag;
+    public int player_lives = 3;
 
     public void PlayGame()
     {
-        l_manag.lives = 3;
-        DontDestroyOnLoad(l_manag);
         SceneManager.LoadScene("Level 1");
     }
 
