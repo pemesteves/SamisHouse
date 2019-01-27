@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour
     public float left_wall;
     public float right_wall;
     public float climb_speed = 1;
-
     public bool startJump;
+
     private Rigidbody2D rigidBody;
     private bool can_get_key;
     private UI_game UI;
     private Animator anim;
+    private AudioManager audioManager;
 
     public bool colliding = false;
     private bool grounded = false;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         can_get_key = false;
         anim = gameObject.GetComponentInChildren<Animator>();
         UI = GameObject.FindObjectOfType<UI_game>();
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
             if (obj != null)
             {
+                audioManager.play_key_pickup();
                 Destroy(obj);
                 UI.Update_number_keys();
             }
