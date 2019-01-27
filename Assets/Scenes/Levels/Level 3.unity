@@ -3052,6 +3052,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 3277164767372942838, guid: bc8f1781792384f4c9cea559f4165386,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3277164767372942792, guid: bc8f1781792384f4c9cea559f4165386,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3111,11 +3116,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3277164767372942838, guid: bc8f1781792384f4c9cea559f4165386,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc8f1781792384f4c9cea559f4165386, type: 3}
@@ -3855,7 +3855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918916855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.29, y: 3.04, z: -32.5}
+  m_LocalPosition: {x: 6, y: 3.04, z: -32.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3873,8 +3873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef5b1a632d07304a951d03fd7d84d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left_boundary: 3.29
-  right_boundary: 31.7
+  left_boundary: 6
+  right_boundary: 32
   height: 3.04
 --- !u!1 &1930011558
 GameObject:
