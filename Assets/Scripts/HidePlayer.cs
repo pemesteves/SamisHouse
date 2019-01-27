@@ -37,4 +37,9 @@ public class HidePlayer : MonoBehaviour
             sprite_render.sortingOrder = 0;
         }
     }
+
+    public bool is_hiding()
+    {
+        return hiding;
+    }
 }
