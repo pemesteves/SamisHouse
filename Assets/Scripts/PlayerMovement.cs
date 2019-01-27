@@ -290,8 +290,9 @@ public class PlayerMovement : MonoBehaviour
             if (obj != null)
             {
                 audioManager.play_key_pickup();
-                Destroy(obj);
-                UI.Update_number_keys();
+                //Destroy(obj);
+                //UI.Update_number_keys();
+                StartCoroutine(MoveKey(obj));
             }
         }
 
@@ -338,6 +339,25 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             levelManager.RestartLevel();
+        }
+    }
+
+    IEnumerator MoveKey(GameObject obj)
+    {
+        while (true)
+        {
+            var worldPoint = UI.keys.transform.position;
+
+            obj.transform.position = Vector3.Lerp(obj.transform.position, worldPoint, 2 * Time.deltaTime);
+
+            if((worldPoint - obj.transform.position).magnitude < 1)
+            {
+                UI.Update_number_keys();
+                Destroy(obj);
+                yield break;
+            }
+
+            yield return null;
         }
     }
 }

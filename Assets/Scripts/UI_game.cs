@@ -19,12 +19,25 @@ public class UI_game : MonoBehaviour
         level.text = "LEVEL " + level_number.ToString();
         number_keys = 0;
         keys.text = "= " + number_keys;
+        
     }
 
     public void Update_number_keys()
     {
         number_keys += 1;
         keys.text = "= " + number_keys;
+    }
+
+    public void UpdateHearts(int number)
+    {
+       if (number > 0)
+        {
+            SpriteRenderer[] hearts = GetComponentsInChildren<SpriteRenderer>();
+            for (int i = hearts.Length;  i > number; i++)
+            {
+                hearts[i].enabled = false;
+            }
+        }
     }
 
 }
