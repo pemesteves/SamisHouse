@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool colliding = false;
     private bool grounded = false;
-
+    
     private bool jumping = false;
     private bool walk_r = false;
     private bool walk_l = false;
@@ -105,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
+                anim.SetTrigger("walk");
                 if (Input.GetKey(KeyCode.LeftShift))
                     transform.Translate(.15f, 0, 0);
                 else
@@ -125,12 +126,27 @@ public class PlayerMovement : MonoBehaviour
                 anim.SetTrigger("jump");
                 rigidBody.AddForce(Vector2.up * 500);
             }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                walk_l = true;
+                walk_r = false;
+                anim.SetTrigger("walk");
+                this.GetComponent<SpriteRenderer>().flipX = true;
+                if (Input.GetKey(KeyCode.D))
+                {
+                    walk_l = false;
+                    anim.SetTrigger("not_walk");
+                    anim.ResetTrigger("walk");
+                }
+            }
         }
 
         if (walk_l && !jumping)
         {
             if (Input.GetKey(KeyCode.A))
             {
+                anim.SetTrigger("walk");
                 if (Input.GetKey(KeyCode.LeftShift))
                     transform.Translate(-.15f, 0, 0);
                 else
@@ -150,6 +166,20 @@ public class PlayerMovement : MonoBehaviour
                 jumping = true;
                 anim.SetTrigger("jump");
                 rigidBody.AddForce(Vector2.up * 500);
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                walk_r = true;
+                walk_l = false;
+                anim.SetTrigger("walk");
+                this.GetComponent<SpriteRenderer>().flipX = false;
+                if (Input.GetKey(KeyCode.A))
+                {
+                    walk_r = false;
+                    anim.SetTrigger("not_walk");
+                    anim.ResetTrigger("walk");
+                }
             }
         }
 
