@@ -290,6 +290,7 @@ public class PlayerMovement : MonoBehaviour
             if (obj != null)
             {
                 audioManager.play_key_pickup();
+                obj.GetComponent<PolygonCollider2D>().enabled = false;
                 //Destroy(obj);
                 //UI.Update_number_keys();
                 StartCoroutine(MoveKey(obj));
@@ -346,7 +347,7 @@ public class PlayerMovement : MonoBehaviour
     {
         while (true)
         {
-            var worldPoint = UI.keys.transform.position;
+            var worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
             obj.transform.position = Vector3.Lerp(obj.transform.position, worldPoint, 2 * Time.deltaTime);
 
