@@ -32,7 +32,7 @@ public class DoorControl : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Player" && Int32.Parse(keys.text.Split(' ')[1]) > 0) //Agarrar
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) && other.gameObject.transform.tag == "Player" && Int32.Parse(keys.text.Split(' ')[1]) > 0) //Agarrar
         {
             // Load new level
             door_open = doorSound.clip;

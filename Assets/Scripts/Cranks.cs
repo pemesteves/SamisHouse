@@ -53,7 +53,7 @@ public class Cranks : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.transform.tag == "Player" && Input.GetKeyDown(KeyCode.LeftControl))
+        if(other.gameObject.transform.tag == "Player" && (Input.GetKeyDown(KeyCode.LeftControl)|| Input.GetKeyDown(KeyCode.RightControl)))
         {
             if (is_down)
             {
