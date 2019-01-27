@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!jumping && !walk_r && !walk_l && !crouch)
+        if (!jumping && !walk_r && !walk_l && !crouch)
         {
             if (Input.GetKeyDown(KeyCode.W)) //Saltar
             {
@@ -216,7 +216,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (obj.layer == LayerDetection.water)
         {
-            levelManager.RestartLevel();
+            UpdateLives();
         }
     }
 
@@ -244,7 +244,7 @@ public class PlayerMovement : MonoBehaviour
         int layer = collider.gameObject.layer;
         if (layer == LayerDetection.destroy_player_trigger)
         {
-            levelManager.RestartLevel();
+            UpdateLives();
         }
     }
 
@@ -262,16 +262,6 @@ public class PlayerMovement : MonoBehaviour
                 UI.Update_number_keys();
             }
         }
-        /*
-        else if(Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Crank")
-        {
-            GameObject obj = GameObject.FindGameObjectWithTag("Crank");
-            if(obj != null)
-            {
-                Animator crank_anim = obj.GetComponent<Animator>();
-                crank_anim.SetTrigger("Interact");
-            }
-        }*/
 
         if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
         {
@@ -290,9 +280,25 @@ public class PlayerMovement : MonoBehaviour
     {
         colliding = false;
 
-        if(collision.gameObject.layer == LayerDetection.climbable)
+        if (collision.gameObject.layer == LayerDetection.climbable)
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 4;
+        }
+    }
+
+    private void UpdateLives()
+    {
+        Debug.Log(levelManager.lives);
+        levelManager.lives--;
+        Debug.Log(levelManager.lives);
+        if (levelManager.lives <= 0)
+        {
+            //DEAD!!!!!
+
+        }
+        else
+        {
+            levelManager.RestartLevel();
         }
     }
 }
