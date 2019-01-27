@@ -46,6 +46,11 @@ public class LevelManager : MonoBehaviour
         loadLevel("Menu");
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void update_heart_containers()
     {
         int player_lives = player_lives_obj.get_player_lives();

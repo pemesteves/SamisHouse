@@ -150,7 +150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -178.5}
+  m_AnchoredPosition: {x: 1, y: -163}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107534937
@@ -193,10 +193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
-    m_Right: 20
-    m_Top: 10
-    m_Bottom: 10
+    m_Left: 100
+    m_Right: 100
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -2022,7 +2022,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Okay friend! We\u2019re very close now!\nThis is my parents\u2019 room,
-    and it looks like they\u2019re sleeping, let\u2019s try to get past them without
+    and it looks like they\u2019re sleeping, \nlet\u2019s try to get past them without
     letting them see us!"
 --- !u!222 &563847246
 CanvasRenderer:
@@ -5788,6 +5788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630442792379611368, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b2b8b858538a244490cd176176c50e0, type: 3}

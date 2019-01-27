@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -178.5}
+  m_AnchoredPosition: {x: 1, y: -166}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &276585008
@@ -635,10 +635,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
-    m_Right: 20
-    m_Top: 10
-    m_Bottom: 10
+    m_Left: 100
+    m_Right: 100
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -1319,8 +1319,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Oh, hey there! I\u2019m Sami! I\u2019m 10 years old and I\u2019ve been
     living in this basement for almost a full year now! \nWhy you ask? \nBecause my
-    parents threw me in here and I\u2019ve been too afraid to try to escape\u2026
-    \n"
+    parents threw me in here and I\u2019ve been too afraid to try to escape\u2026 "
 --- !u!222 &858746221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43215,7 +43214,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "But not anymore, now that you\u2019re here we can escape together! \nOur
     goal is the attic, the safest place in the entire world! Come on, hurry up, let\u2019s
-    go!\n"
+    go!"
 --- !u!222 &1456730389
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43842,7 +43841,7 @@ Tilemap:
       - {fileID: 21300004, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
       - {fileID: 21300006, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
       - {fileID: 21300008, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
-      m_AnimationSpeed: 10
+      m_AnimationSpeed: 10.000001
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 18, y: -1, z: 0}
@@ -43930,7 +43929,7 @@ Tilemap:
       - {fileID: 21300004, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
       - {fileID: 21300006, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
       - {fileID: 21300008, guid: bf541ba7810cafd43af665d35d1dc29e, type: 3}
-      m_AnimationSpeed: 10.000001
+      m_AnimationSpeed: 10
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 18, y: 1, z: 0}
@@ -45550,6 +45549,36 @@ PrefabInstance:
     - target: {fileID: 8614293916655187470, guid: 7b2b8b858538a244490cd176176c50e0,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614293916994424587, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614293916841348193, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888239414995315271, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129914874666317490, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630442792379611368, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445652139436537940, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

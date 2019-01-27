@@ -27,6 +27,7 @@ public class TextBox : MonoBehaviour
         if (player_lives.player_seen_level())
         {
             player.enabled = true;
+            Destroy(GameObject.Find("player_dialog_img"));
             Destroy(gameObject);
         }
 
@@ -36,6 +37,7 @@ public class TextBox : MonoBehaviour
             {
                 player.enabled = true;
                 player_lives.mark_level_seen();
+                Destroy(GameObject.Find("player_dialog_img"));
                 Destroy(gameObject);
             }
             else
