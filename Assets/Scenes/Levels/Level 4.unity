@@ -8552,12 +8552,12 @@ PrefabInstance:
     - target: {fileID: 4743530321291387512, guid: 81dc40a493fbfdc4390cf793790017a0,
         type: 3}
       propertyPath: left_wall
-      value: -14.56
+      value: -13.6
       objectReference: {fileID: 0}
     - target: {fileID: 4743530321291387512, guid: 81dc40a493fbfdc4390cf793790017a0,
         type: 3}
       propertyPath: right_wall
-      value: 14.59
+      value: 13.59
       objectReference: {fileID: 0}
     - target: {fileID: 4743530321291387513, guid: 81dc40a493fbfdc4390cf793790017a0,
         type: 3}
