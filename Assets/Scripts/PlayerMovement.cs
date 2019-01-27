@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
                 else
                     transform.Translate(.1f, 0, 0);
             }
-            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftShift))
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 walk_r = false;
                 walk_l = true;
@@ -264,7 +264,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>() && other.gameObject.transform.tag != "Crank")
             colliding = true;
 
-        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))&& other.gameObject.transform.tag == "Key") //Agarrar
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
             if (obj != null)
