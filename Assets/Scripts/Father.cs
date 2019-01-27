@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Father : MonoBehaviour
 {
-
-    public float wake_interval_seconds = 4f;
+    
     public float check_delay_after_sound = 1.5f;
     public Color sleep_color;
     public Color wake_color;
@@ -15,6 +14,9 @@ public class Father : MonoBehaviour
     private PlayerMovement player;
     private GameObject father_bed;
 
+    private int minWait = 2;
+    private int maxWait = 6;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,9 @@ public class Father : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         player = GameObject.FindObjectOfType<PlayerMovement>();
         father_bed = GameObject.Find("father_bed");
-        InvokeRepeating("wake_up_father", 2f, wake_interval_seconds);
+        var x = Random.Range(minWait, maxWait);
+        Invoke("wake_up_father", x);
+
     }
 
     // Update is called once per frame
@@ -54,6 +58,9 @@ public class Father : MonoBehaviour
         }
 
         reset_background();
+        var x = Random.Range(minWait, maxWait);
+        Invoke("wake_up_father", x);
+
     }
 
     private void reset_background()
