@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private bool walk_r = false;
     private bool walk_l = false;
     private bool crouch = false;
+    private bool climb = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!jumping && !walk_r && !walk_l && !crouch)
+        if(!jumping && !walk_r && !walk_l && !crouch && !climb)
         {
             if (Input.GetKeyDown(KeyCode.W)) //Saltar
             {
@@ -295,6 +296,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && other.gameObject.layer == LayerDetection.climbable)
         {
+            anim.ResetTrigger("walk");
+            anim.ResetTrigger("jump");
+            anim.ResetTrigger("crouch");
+            anim.ResetTrigger("interact");
+            anim.SetBool("climb", true);
+            this.GetComponent<SpriteRenderer>().flipX = false;
+
+
             rigidBody.velocity = Vector3.zero;
             transform.Translate(0f, 0.1f * climb_speed, 0f);
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -312,6 +321,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.layer == LayerDetection.climbable)
         {
+            anim.SetBool("climb", false);
             this.GetComponent<Rigidbody2D>().gravityScale = 4;
         }
     }
