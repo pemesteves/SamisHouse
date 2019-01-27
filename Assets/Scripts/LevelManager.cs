@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
 
     public void loadLevel(string level)
     {
+        player_lives_obj.mark_level_not_seen();
         Application.LoadLevel(level);
     }
 
@@ -41,6 +42,7 @@ public class LevelManager : MonoBehaviour
     
     public void loadMenu()
     {
+        player_lives_obj.mark_level_not_seen();
         loadLevel("Menu");
     }
 

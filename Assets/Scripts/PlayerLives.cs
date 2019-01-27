@@ -9,6 +9,8 @@ public class PlayerLives : MonoBehaviour
 
     private int max_lives = 3;
 
+    private bool seen_level_dialog = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +47,20 @@ public class PlayerLives : MonoBehaviour
     public int get_player_lives()
     {
         return player_lives;
+    }
+
+    public void mark_level_seen()
+    {
+        seen_level_dialog = true;
+    }
+
+    public void mark_level_not_seen()
+    {
+        seen_level_dialog = false;
+    }
+
+    public bool player_seen_level()
+    {
+        return seen_level_dialog;
     }
 }
