@@ -6,10 +6,14 @@ public class Father : MonoBehaviour
 {
 
     public float wake_interval_seconds = 4f;
+    public float check_delay_after_sound = 1.5f;
+    public Color sleep_color;
+    public Color wake_color;
 
     private AudioSource audioSource;
     private GameObject furniture;
     private PlayerMovement player;
+    private GameObject father_bed;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,7 @@ public class Father : MonoBehaviour
         furniture = GameObject.Find("Furniture");
         audioSource = GetComponent<AudioSource>();
         player = GameObject.FindObjectOfType<PlayerMovement>();
+        father_bed = GameObject.Find("father_bed");
         InvokeRepeating("wake_up_father", 2f, wake_interval_seconds);
     }
 
@@ -30,7 +35,9 @@ public class Father : MonoBehaviour
     private void wake_up_father()
     {
         audioSource.Play();
-        Invoke("check_if_player_hiding", 2f);
+        father_bed.GetComponent<SpriteRenderer>().color = wake_color;
+
+        Invoke("check_if_player_hiding", check_delay_after_sound);
     }
 
     private void check_if_player_hiding()
@@ -45,5 +52,12 @@ public class Father : MonoBehaviour
         {
             player.UpdateLives();
         }
+
+        reset_background();
+    }
+
+    private void reset_background()
+    {
+        father_bed.GetComponent<SpriteRenderer>().color = sleep_color;
     }
 }
