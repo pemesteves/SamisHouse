@@ -42,29 +42,29 @@ public class PlayerMovement : MonoBehaviour
     {
         if (walk_r)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 if (!jumping && !crouch)
                     anim.SetTrigger("walk");
 
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     transform.Translate(.15f, 0, 0);
                 else
                     transform.Translate(.1f, 0, 0);
             }
-            else if (Input.GetKey(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftShift))
             {
                 walk_r = false;
                 walk_l = true;
                 this.GetComponent<SpriteRenderer>().flipX = true;
             }
 
-            if (Input.GetKeyUp(KeyCode.D))
+            if (Input.GetKeyUp(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 walk_r = false;
                 if (!jumping)
                 {
-                    if (!Input.GetKey(KeyCode.A) && !crouch)
+                    if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !crouch)
                     {
                         anim.ResetTrigger("walk");
                         anim.SetTrigger("not_walk");
@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!jumping)
             {
-                if (Input.GetKey(KeyCode.W))
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
                 {
                     startJump = true;
                     jumping = true;
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
                     rigidBody.AddForce(Vector2.up * 500);
                 }
 
-                if (Input.GetKey(KeyCode.S))
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
                     crouch = true;
                     anim.SetTrigger("crouch");
@@ -92,29 +92,29 @@ public class PlayerMovement : MonoBehaviour
 
         if (walk_l)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 if (!jumping && !crouch)
                     anim.SetTrigger("walk");
 
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     transform.Translate(-.15f, 0, 0);
                 else
                     transform.Translate(-.1f, 0, 0);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 walk_r = true;
                 walk_l = false;
                 this.GetComponent<SpriteRenderer>().flipX = false;
             }
 
-            if (Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 walk_l = false;
                 if (!jumping)
                 {
-                    if (!Input.GetKey(KeyCode.D) && !crouch)
+                    if (!(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !crouch)
                     {
                         anim.ResetTrigger("walk");
                         anim.SetTrigger("not_walk");
@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!jumping)
             {
-                if (Input.GetKey(KeyCode.W))
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
                 {
                     startJump = true;
                     jumping = true;
@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
                     rigidBody.AddForce(Vector2.up * 500);
                 }
 
-                if (Input.GetKey(KeyCode.S))
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
                     crouch = true;
                     anim.SetTrigger("crouch");
@@ -142,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!walk_r && !walk_l)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 if (!jumping && !crouch)
                     anim.SetTrigger("walk");
@@ -150,13 +150,13 @@ public class PlayerMovement : MonoBehaviour
                 walk_l = true;
                 this.GetComponent<SpriteRenderer>().flipX = true;
 
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     transform.Translate(-.15f, 0, 0);
                 else
                     transform.Translate(-.1f, 0, 0);
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 if (!jumping && !crouch)
                     anim.SetTrigger("walk");
@@ -164,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
                 walk_r = true;
                 this.GetComponent<SpriteRenderer>().flipX = false;
 
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                     transform.Translate(.15f, 0, 0);
                 else
                     transform.Translate(.1f, 0, 0);
@@ -172,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!jumping)
             {
-                if (Input.GetKey(KeyCode.W))
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
                 {
                     startJump = true;
                     jumping = true;
@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
                     rigidBody.AddForce(Vector2.up * 500);
                 }
 
-                if (Input.GetKey(KeyCode.S))
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
                     crouch = true;
                     anim.SetTrigger("crouch");
@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             crouch = false;
             anim.ResetTrigger("crouch");
@@ -212,14 +212,14 @@ public class PlayerMovement : MonoBehaviour
             anim.ResetTrigger("jump");
             jumping = false;
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 anim.SetTrigger("walk");
                 walk_l = true;
                 this.GetComponent<SpriteRenderer>().flipX = true;
             }
 
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 anim.SetTrigger("walk");
                 walk_r = true;
@@ -238,7 +238,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.gravityScale = 0.1f;
             grounded = true;
-            //startJump = false;
         }
     }
 
@@ -265,16 +264,14 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>() && other.gameObject.transform.tag != "Crank")
             colliding = true;
 
-        if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Key") //Agarrar
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))&& other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
             if (obj != null)
             {
                 audioManager.play_key_pickup();
-                //obj.GetComponent<PolygonCollider2D>().enabled = false;
                 Destroy(obj);
                 UI.Update_number_keys();
-                //StartCoroutine(MoveKey(obj));
             }
         }
 
@@ -289,19 +286,19 @@ public class PlayerMovement : MonoBehaviour
             rigidBody.velocity = Vector3.zero;
             this.GetComponent<Rigidbody2D>().gravityScale = 0;
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
                 transform.Translate(0f, 0.1f * climb_speed, 0f);
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 transform.Translate(0f, -0.1f * climb_speed, 0f);
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 walk_r = true;
                 walk_l = false;
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 walk_l = true;
                 walk_r = false;
@@ -340,22 +337,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /*IEnumerator MoveKey(GameObject obj)
-    {
-        while (true)
-        {
-            var worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(UI.keys.transform.position.x - UI.keys.minWidth, UI.keys.transform.position.y - UI.keys.minHeight, 0));
-
-
-            obj.transform.position = Vector3.Lerp(obj.transform.position, worldPoint, 2 * Time.deltaTime);
-
-            if((worldPoint - obj.transform.position).magnitude < 1)
-            {
-                obj.GetComponent<PolygonCollider2D>().enabled = true;
-                yield break;
-            }
-
-            yield return null;
-        }
-    }*/
 }
