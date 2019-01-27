@@ -26,11 +26,11 @@ public class PlayerMovement : MonoBehaviour
     private bool climb = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         startJump = false;
-        rigidBody = this.GetComponent<Rigidbody2D>();
-        anim = gameObject.GetComponentInChildren<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         UI = GameObject.FindObjectOfType<UI_game>();
         audioManager = GameObject.FindObjectOfType<AudioManager>();
         levelManager = GameObject.FindObjectOfType<LevelManager>();
@@ -227,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
         if (obj.layer == LayerDetection.ground || obj.layer == LayerDetection.crate)
         {
             startJump = false;
-            anim.SetTrigger("reach_ground");
+            anim.SetTrigger("reach_ground");    
             anim.ResetTrigger("jump");
             jumping = false;
 
@@ -331,6 +331,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void UpdateLives()
     {
+        if (!player_lives)
+            player_lives = GameObject.FindObjectOfType<PlayerLives>();
+
         player_lives.decrement_lives();
         if (player_lives.is_player_dead())
         {

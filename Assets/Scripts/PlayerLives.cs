@@ -41,4 +41,9 @@ public class PlayerLives : MonoBehaviour
     {
         return player_lives <= 0;
     }
+
+    public int get_player_lives()
+    {
+        return player_lives;
+    }
 }

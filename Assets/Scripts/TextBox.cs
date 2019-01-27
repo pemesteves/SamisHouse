@@ -6,18 +6,13 @@ public class TextBox : MonoBehaviour
 {
     private PlayerMovement player;
     public TextBox_Text current;
-
-
-    void Awake()
-    {
-        player = GameObject.FindObjectOfType<PlayerMovement>();
-        player.enabled = false;
-    }
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindObjectOfType<PlayerMovement>();
+        player.enabled = false;
     }
 
     // Update is called once per frame
