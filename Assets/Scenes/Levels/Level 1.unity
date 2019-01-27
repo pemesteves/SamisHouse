@@ -1305,7 +1305,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 09f02e17743d02b40969a988b132d620, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1317,13 +1317,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TEXTO 2 asdoiasjdjas
-
-    djdasjodjas
-
-    dsajdasikjjp
-
-'
+  m_Text: "Oh, hey there! I\u2019m Sami! I\u2019m 10 years old and I\u2019ve been
+    living in this basement for almost a full year now! \nWhy you ask? \nBecause my
+    parents threw me in here and I\u2019ve been too afraid to try to escape\u2026
+    \n"
 --- !u!222 &858746221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43090,7 +43087,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 09f02e17743d02b40969a988b132d620, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -43102,11 +43099,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'PORasd uiniasd asdnqwi amsdmqwn iansidn asdn a
-
-    dnasdn as
-
-    asdsah'
+  m_Text: "There once was a house. In this house lived a boy. His name was Samuel.\nBut
+    little Sami was unlike most other boys.  He could sense and see things others
+    could not. \nThis probably being the leading cause of his descent into madness..."
 --- !u!222 &1441064630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43206,7 +43201,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 09f02e17743d02b40969a988b132d620, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -43218,17 +43213,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TEXTO 3 dsauiduiasjiodasjdas
-
-    asjdiasjd
-
-    s asdoiasjdjas
-
-    djdasjodjas
-
-    dsajdasikjjp
-
-'
+  m_Text: "But not anymore, now that you\u2019re here we can escape together! \nOur
+    goal is the attic, the safest place in the entire world! Come on, hurry up, let\u2019s
+    go!\n"
 --- !u!222 &1456730389
 CanvasRenderer:
   m_ObjectHideFlags: 0
