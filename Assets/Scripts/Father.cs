@@ -17,22 +17,20 @@ public class Father : MonoBehaviour
     private int minWait = 2;
     private int maxWait = 6;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        furniture = GameObject.Find("Furniture");
-        audioSource = GetComponent<AudioSource>();
-        player = GameObject.FindObjectOfType<PlayerMovement>();
-        father_bed = GameObject.Find("father_bed");
-        var x = Random.Range(minWait, maxWait);
-        Invoke("wake_up_father", x);
-
-    }
+    private bool started = false;
 
     // Update is called once per frame
     void Update()
     {
-
+        if (!started && !GameObject.FindObjectOfType<TextBox>()) {
+            furniture = GameObject.Find("Furniture");
+            audioSource = GetComponent<AudioSource>();
+            player = GameObject.FindObjectOfType<PlayerMovement>();
+            father_bed = GameObject.Find("father_bed");
+            var x = Random.Range(minWait, maxWait);
+            Invoke("wake_up_father", x);
+            started = true;
+        }
 
     }
 

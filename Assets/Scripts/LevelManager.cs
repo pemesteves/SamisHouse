@@ -47,7 +47,6 @@ public class LevelManager : MonoBehaviour
     public void update_heart_containers()
     {
         int player_lives = player_lives_obj.get_player_lives();
-        Debug.Log(player_lives);
 
         if (player_lives == 3)
         {

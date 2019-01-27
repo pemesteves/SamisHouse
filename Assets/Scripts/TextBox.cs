@@ -8,6 +8,7 @@ public class TextBox : MonoBehaviour
     public TextBox_Text current;
     
 
+
     // Start is called before the first frame update
     void Start()
     {
