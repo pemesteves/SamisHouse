@@ -9,12 +9,17 @@ public class DoorControl : MonoBehaviour
 {
     public string next_level;
 
+    public AudioClip door_open;
+
+    private AudioSource doorSound;
+
     private LevelManager lvlManager;
     private Text keys;
 
     // Start is called before the first frame update
     void Start()
     {
+        doorSound = GetComponent<AudioSource>();
         lvlManager = GameObject.FindObjectOfType<LevelManager>();
         keys = GameObject.Find("Key_text").GetComponent<Text>();
     }
@@ -30,6 +35,8 @@ public class DoorControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) && other.gameObject.transform.tag == "Player" && Int32.Parse(keys.text.Split(' ')[1]) > 0) //Agarrar
         {
             // Load new level
+            door_open = doorSound.clip;
+            doorSound.Play();
             lvlManager.loadLevel(next_level);
         }
     }
