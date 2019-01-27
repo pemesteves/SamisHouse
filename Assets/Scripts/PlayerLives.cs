@@ -10,7 +10,7 @@ public class PlayerLives : MonoBehaviour
     private int max_lives = 3;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player Lives");
 
