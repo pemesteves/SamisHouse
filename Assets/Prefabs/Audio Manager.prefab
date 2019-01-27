@@ -141,3 +141,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key_pickup: {fileID: 8300000, guid: fc735cab2654b554d96e9589039d4c3a, type: 3}
+  eagle_sound: {fileID: 8300000, guid: b4f1920ed7d9bf24eac7175343806284, type: 3}

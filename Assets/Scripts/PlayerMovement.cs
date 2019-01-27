@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private UI_game UI;
     private Animator anim;
     private AudioManager audioManager;
+    private LevelManager levelManager;
 
     public bool colliding = false;
     private bool grounded = false;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         anim = gameObject.GetComponentInChildren<Animator>();
         UI = GameObject.FindObjectOfType<UI_game>();
         audioManager = GameObject.FindObjectOfType<AudioManager>();
+        levelManager = GameObject.FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -112,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (obj.layer == LayerDetection.water)
         {
-            Destroy(this.gameObject);
+            levelManager.RestartLevel();
         }
     }
 
@@ -140,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
         int layer = collider.gameObject.layer;
         if (layer == LayerDetection.destroy_player_trigger)
         {
-            Destroy(gameObject);
+            levelManager.RestartLevel();
         }
     }
 
