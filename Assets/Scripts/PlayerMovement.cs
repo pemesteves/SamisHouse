@@ -290,9 +290,39 @@ public class PlayerMovement : MonoBehaviour
     {
         colliding = false;
 
-        if(collision.gameObject.layer == LayerDetection.climbable)
+        if (collision.gameObject.layer == LayerDetection.climbable)
         {
             this.GetComponent<Rigidbody2D>().gravityScale = 4;
         }
     }
 }
+
+        if (!jumping && !walk_r && !walk_l && !crouch)
+        {
+            if (Input.GetKeyDown(KeyCode.W)) //Saltar
+            {
+                startJump = true;
+                jumping = true;
+                anim.SetTrigger("jump");
+                rigidBody.AddForce(Vector2.up * 500);
+            }
+
+            if (Input.GetKeyDown(KeyCode.S)) //Baixar
+            {
+                crouch = true;
+                anim.SetTrigger("crouch");
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                walk_r = true;
+                anim.SetTrigger("walk");
+                this.GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                walk_l = true;
+                anim.SetTrigger("walk");
+                this.GetComponent<SpriteRenderer>().flipX = true;
+            }
