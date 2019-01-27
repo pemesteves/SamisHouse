@@ -347,7 +347,8 @@ public class PlayerMovement : MonoBehaviour
     {
         while (true)
         {
-            var worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+            var worldPoint = Camera.main.ScreenToWorldPoint(new Vector3( UI.keys.transform.position.x, UI.keys.transform.position.y, 0));
+
 
             obj.transform.position = Vector3.Lerp(obj.transform.position, worldPoint, 2 * Time.deltaTime);
 
@@ -355,6 +356,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 UI.Update_number_keys();
                 Destroy(obj);
+                obj.GetComponent<PolygonCollider2D>().enabled = true;
                 yield break;
             }
 
