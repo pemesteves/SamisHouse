@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
                 this.GetComponent<SpriteRenderer>().flipX = true;
             }
 
-            if (Input.GetKeyUp(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
             {
                 walk_r = false;
                 if (!jumping)
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
                 this.GetComponent<SpriteRenderer>().flipX = false;
             }
 
-            if (Input.GetKeyUp(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
             {
                 walk_l = false;
                 if (!jumping)
@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
         {
             crouch = false;
             anim.ResetTrigger("crouch");
@@ -264,7 +264,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.transform.tag != "Key" && !other.GetComponent<DoorControl>() && other.gameObject.transform.tag != "Crank")
             colliding = true;
 
-        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && other.gameObject.transform.tag == "Key") //Agarrar
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) && other.gameObject.transform.tag == "Key") //Agarrar
         {
             GameObject obj = GameObject.FindGameObjectWithTag("Key");
             if (obj != null)
