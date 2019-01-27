@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
 
     public AudioClip key_pickup;
-    public AudioClip death_sound;
 
     private AudioSource audioSource;
 
@@ -25,12 +24,6 @@ public class AudioManager : MonoBehaviour
     public void play_key_pickup()
     {
         audioSource.clip = key_pickup;
-        audioSource.Play();
-    }
-
-    public void play_death_sound()
-    {
-        audioSource.clip = death_sound;
         audioSource.Play();
     }
 }

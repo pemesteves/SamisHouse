@@ -322,7 +322,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void UpdateLives()
     {
-        audioManager.play_death_sound();
         if (!player_lives)
             player_lives = GameObject.FindObjectOfType<PlayerLives>();
 

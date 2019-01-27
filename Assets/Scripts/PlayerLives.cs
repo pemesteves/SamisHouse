@@ -26,6 +26,7 @@ public class PlayerLives : MonoBehaviour
 
     public void decrement_lives()
     {
+        GetComponent<AudioSource>().Play();
         player_lives--;
     }
 

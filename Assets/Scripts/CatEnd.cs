@@ -44,7 +44,7 @@ public class CatEnd : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<Animator>().enabled = false;
 
-        Invoke("end_game", 5f);
+        Invoke("end_game", 10f);
     }
 
     private void end_game()
