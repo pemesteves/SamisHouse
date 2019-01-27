@@ -13,6 +13,9 @@ public class CatEnd : MonoBehaviour
 
     public GameObject dead_stuff;
 
+    private bool during_end_message = false;
+    public GameObject final_text_box;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,14 @@ public class CatEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (during_end_message && Input.GetKeyDown(KeyCode.Return))
+        {
+            final_text_box.SetActive(false);
+            during_end_message = false;
+            anim.SetTrigger("end_game");
+
+            Invoke("end_game", 10f);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D coll)
@@ -33,6 +43,7 @@ public class CatEnd : MonoBehaviour
         {
             anim.SetTrigger("fade_animation");
             ended = true;
+            during_end_message = true;
             Invoke("spawn_dead_stuff", 2.5f);
         } 
     }
@@ -44,7 +55,7 @@ public class CatEnd : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.GetComponent<Animator>().enabled = false;
 
-        Invoke("end_game", 10f);
+        final_text_box.SetActive(true);
     }
 
     private void end_game()
