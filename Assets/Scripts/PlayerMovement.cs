@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
     public bool colliding = false;
     private bool grounded = false;
 
+    private bool jumping = false;
+    private bool walk_r = false;
+    private bool walk_l = false;
+    private bool crouch = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,66 +39,147 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && !colliding) //Saltar
+        if(!jumping && !walk_r && !walk_l && !crouch)
         {
-            if (!startJump)
+            if (Input.GetKeyDown(KeyCode.W)) //Saltar
             {
                 startJump = true;
+                jumping = true;
+                anim.SetTrigger("jump");
+                rigidBody.AddForce(Vector2.up * 500);
+            }
+
+            if (Input.GetKeyDown(KeyCode.S)) //Baixar
+            {
+                crouch = true;
+                anim.SetTrigger("crouch");
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                walk_r = true;
+                anim.SetTrigger("walk");
+                this.GetComponent<SpriteRenderer>().flipX = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                walk_l = true;
+                anim.SetTrigger("walk");
+                this.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+
+        if (jumping)
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(.15f, 0, 0);
+                else
+                    transform.Translate(.1f, 0, 0);
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(-.15f, 0, 0);
+                else
+                    transform.Translate(-.1f, 0, 0);
+            }
+
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                walk_r = false;
+                anim.ResetTrigger("walk");
+                anim.SetTrigger("not_walk");
+            }
+
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                walk_l = false;
+                anim.ResetTrigger("walk");
+                anim.SetTrigger("not_walk");
+            }
+        }
+
+        if (walk_r && !jumping)
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(.15f, 0, 0);
+                else
+                    transform.Translate(.1f, 0, 0);
+            }
+
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                walk_r = false;
+                anim.ResetTrigger("walk");
+                anim.SetTrigger("not_walk");
+            }
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                startJump = true;
+                jumping = true;
                 anim.SetTrigger("jump");
                 rigidBody.AddForce(Vector2.up * 500);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S)) //Baixar
+        if (walk_l && !jumping)
         {
-            anim.SetTrigger("crouch");
-        }
-        else if (Input.GetKeyUp(KeyCode.S))
-        {
-            anim.SetTrigger("not_crouch");
-        }
-
-        if (Input.GetKey(KeyCode.D)) //Andar para a direita
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-                transform.Translate(.15f, 0, 0);
-            else
-                transform.Translate(.1f, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            anim.SetTrigger("walk");
-            this.GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (Input.GetKeyUp(KeyCode.D))
-        {
-            anim.SetTrigger("not_walk");
-        }
-
-        if (Input.GetKey(KeyCode.A)) //Andar para a esquerda
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-                transform.Translate(-.15f, 0, 0);
-            else
-                transform.Translate(-.1f, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            anim.SetTrigger("walk");
-            this.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.A))
-        {
-            anim.SetTrigger("not_walk");
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl)) //Agarrar
-        {
-            if (can_get_key)
+            if (Input.GetKey(KeyCode.A))
             {
-                GameObject obj = GameObject.FindGameObjectWithTag("key");
-                Destroy(obj);
-                UI.Update_number_keys();
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(-.15f, 0, 0);
+                else
+                    transform.Translate(-.1f, 0, 0);
+            }
+
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                walk_l = false;
+                anim.ResetTrigger("walk");
+                anim.SetTrigger("not_walk");
+            }
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                startJump = true;
+                jumping = true;
+                anim.SetTrigger("jump");
+                rigidBody.AddForce(Vector2.up * 500);
+            }
+        }
+
+        if (crouch)
+        {
+            if (Input.GetKey(KeyCode.D))
+            {
+                this.GetComponent<SpriteRenderer>().flipX = false;
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(.15f, 0, 0);
+                else
+                    transform.Translate(.1f, 0, 0);
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                this.GetComponent<SpriteRenderer>().flipX = true;
+                if (Input.GetKey(KeyCode.LeftShift))
+                    transform.Translate(-.15f, 0, 0);
+                else
+                    transform.Translate(-.1f, 0, 0);
+            }
+
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                anim.SetTrigger("not_crouch");
+                anim.ResetTrigger("crouch");
+                crouch = false;
             }
         }
 
@@ -111,6 +197,22 @@ public class PlayerMovement : MonoBehaviour
         {
             startJump = false;
             anim.SetTrigger("reach_ground");
+            anim.ResetTrigger("jump");
+            jumping = false;
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                anim.SetTrigger("walk");
+                walk_l = true;
+                this.GetComponent<SpriteRenderer>().flipX = true;
+            }
+
+            else if (Input.GetKey(KeyCode.D))
+            {
+                anim.SetTrigger("walk");
+                walk_r = true;
+                this.GetComponent<SpriteRenderer>().flipX = false;
+            }
         }
         else if (obj.layer == LayerDetection.water)
         {
