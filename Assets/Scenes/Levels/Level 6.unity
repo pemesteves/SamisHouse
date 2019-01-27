@@ -146,7 +146,7 @@ RectTransform:
   m_Children:
   - {fileID: 563847243}
   m_Father: {fileID: 8614293916939649396}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2022,7 +2022,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Okay friend! We\u2019re very close now!\nThis is my parents\u2019 room,
-    and it looks like they\u2019re sleeping, \nlet\u2019s try to get past them without
+    and it looks like they\u2019re sleeping,\nlet\u2019s try to get past them without
     letting them see us!"
 --- !u!222 &563847246
 CanvasRenderer:
@@ -5789,10 +5789,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8614293916994424587, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614293916841348193, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888239414995315271, guid: 7b2b8b858538a244490cd176176c50e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6630442792379611368, guid: 7b2b8b858538a244490cd176176c50e0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b2b8b858538a244490cd176176c50e0, type: 3}
