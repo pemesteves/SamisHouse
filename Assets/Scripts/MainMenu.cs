@@ -36,6 +36,11 @@ public class MainMenu : MonoBehaviour
         {
             SceneManager.LoadScene("Level 6");
         }
+
+        if (Input.GetKey("7") && Input.GetKey(KeyCode.UpArrow))
+        {
+            SceneManager.LoadScene("Final Level");
+        }
     }
 
     public void PlayGame()
