@@ -39,7 +39,7 @@ public class CatEnd : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D coll)
     {
-        if (coll.gameObject.transform.tag == "Player" && Input.GetKeyDown(KeyCode.LeftControl) && !ended)
+        if (coll.gameObject.transform.tag == "Player" && (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) && !ended)
         {
             anim.SetTrigger("fade_animation");
             ended = true;
