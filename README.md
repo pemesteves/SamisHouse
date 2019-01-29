@@ -14,7 +14,7 @@ Game developed during the Global Game Jam 2019.
 * [Pedro Esteves](https://github.com/pemesteves "pemesteves")
 
 
-**Link:** [https://globalgamejam.org/2019/games/samis-house](https://globalgamejam.org/2019/games/samis-house, "GGJ Website")
+**Link:** [https://globalgamejam.org/2019/games/samis-house](https://globalgamejam.org/2019/games/samis-house "GGJ Website")
 
 ### Technologies
 * C#
