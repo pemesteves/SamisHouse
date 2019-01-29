@@ -5,6 +5,11 @@ Game developed during the Global Game Jam 2019.
 
 **Theme:** What home means to you
 
+### Screenshots
+![Game Menu](https://github.com/pemesteves/GGJ_2019/raw/master/Assets/Sprites/main_menu.png "Menu")
+![Basement](https://github.com/pemesteves/GGJ_2019/raw/master/Assets/Sprites/basement.png "Basement")
+![Garden](https://github.com/pemesteves/GGJ_2019/raw/master/Assets/Sprites/garden.png "Garden")
+
 ### Team
 * [João Campos](https://github.com/Pastilhas "Pastilhas")
 * [João Leite](https://github.com/Jopamoleite "Jopamoleite")
@@ -23,4 +28,5 @@ Game developed during the Global Game Jam 2019.
 ### Description
 It's a platforming game about a little kid with a mental illness, as he struggles with things both real and imaginary. You will be helping him trying to get from his basement, where he feels trapped, to his attic, the only place he feels safe in.
 
-#### To play the game download the zip file under the "Game" folder. Have fun!
+#### To play the game download the zip file under the "Game" folder and run the executable. 
+### Have fun!
