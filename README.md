@@ -7,8 +7,13 @@ Game developed during the Global Game Jam 2019.
 
 ### Screenshots
 ![Game Menu](https://github.com/pemesteves/GGJ_2019/raw/master/Assets/Sprites/main_menu.png "Menu")
+**Fig. 1: Menu** <br><br>
+
 ![Basement](https://github.com/pemesteves/GGJ_2019/raw/master/Assets/Sprites/basement.png "Basement")
+**Fig. 2: Level 1** <br><br>
+
 ![Garden](https://github.com/pemesteves/GGJ_2019/raw/master/Assets/Sprites/garden.png "Garden")
+**Fig. 3: Level 3** <br><br>
 
 ### Team
 * [João Campos](https://github.com/Pastilhas "Pastilhas")
