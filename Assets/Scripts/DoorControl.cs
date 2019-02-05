@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Text;
+using UnityEngine.SceneManagement;
+
 
 public class DoorControl : MonoBehaviour
 {
@@ -15,12 +17,13 @@ public class DoorControl : MonoBehaviour
 
     private LevelManager lvlManager;
     private Text keys;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         doorSound = GetComponent<AudioSource>();
         lvlManager = GameObject.FindObjectOfType<LevelManager>();
+
         keys = GameObject.Find("Key_text").GetComponent<Text>();
     }
 
@@ -32,7 +35,9 @@ public class DoorControl : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) && other.gameObject.transform.tag == "Player" && Int32.Parse(keys.text.Split(' ')[1]) > 0) //Agarrar
+        Scene scene = SceneManager.GetActiveScene();
+
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) && other.gameObject.transform.tag == "Player" && (Int32.Parse(keys.text.Split(' ')[1]) > 0 || scene.name == "Final Level" || scene.name == "Roof")) //Agarrar
         {
             // Load new level
             door_open = doorSound.clip;
