@@ -2018,7 +2018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_level: Level 3
-  door_open: {fileID: 0}
+  door_open: {fileID: 8300000, guid: b6934f64e2464ad449e4dae9082266cf, type: 3}
 --- !u!483693784 &990041750
 TilemapRenderer:
   m_ObjectHideFlags: 0

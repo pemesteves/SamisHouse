@@ -3117,7 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_level: Level 4
-  door_open: {fileID: 0}
+  door_open: {fileID: 8300000, guid: b6934f64e2464ad449e4dae9082266cf, type: 3}
 --- !u!61 &1160153356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4018,6 +4018,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4743530321291387513, guid: 81dc40a493fbfdc4390cf793790017a0,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4743530321291387512, guid: 81dc40a493fbfdc4390cf793790017a0,
         type: 3}
       propertyPath: UI
@@ -4032,11 +4037,6 @@ PrefabInstance:
         type: 3}
       propertyPath: right_wall
       value: 45.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4743530321291387513, guid: 81dc40a493fbfdc4390cf793790017a0,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 494508616, guid: 81dc40a493fbfdc4390cf793790017a0, type: 3}
       propertyPath: m_Enabled
