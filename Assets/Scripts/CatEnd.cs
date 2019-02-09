@@ -19,7 +19,7 @@ public class CatEnd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GameObject.Find("UI").GetComponent<Animator>();
+        anim = GameObject.Find("FinalLevel_UI").GetComponent<Animator>();
         lvl_manager = GameObject.FindObjectOfType<LevelManager>();
         player_lives = GameObject.FindObjectOfType<PlayerLives>();
     }
