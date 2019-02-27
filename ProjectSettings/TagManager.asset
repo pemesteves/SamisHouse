@@ -8,6 +8,7 @@ TagManager:
   - Crank
   - Player Lives
   - Eagle
+  - Text
   layers:
   - Default
   - TransparentFX
