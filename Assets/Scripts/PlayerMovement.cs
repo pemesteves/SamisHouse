@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private bool crouch = false;
     private bool climb = false;
 
+    private bool above_platform = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -205,6 +207,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject obj = collision.gameObject;
+
         if (obj.layer == LayerDetection.ground || obj.layer == LayerDetection.crate)
         {
             startJump = false;
@@ -234,6 +237,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.layer == LayerDetection.ground && collision.gameObject.tag == "Platform" && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
+        {
+            if (above_platform)
+            {
+                above_platform = false;
+                collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+                collision.gameObject.layer = LayerDetection.final_level_platform;
+            }
+        }
+
         if (collision.gameObject.layer == LayerDetection.ground)
         {
             rigidBody.gravityScale = 0.1f;
@@ -310,6 +323,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
+        if (collision.gameObject.layer == LayerDetection.final_level_platform)
+        {
+            if (!above_platform)
+            {
+                if (this.gameObject.transform.position.y > collision.gameObject.transform.position.y)
+                {
+                    above_platform = true;
+                    collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+                    collision.gameObject.layer = LayerDetection.ground;
+                }
+            }
+        }
+
         colliding = false;
 
         if (collision.gameObject.layer == LayerDetection.climbable)

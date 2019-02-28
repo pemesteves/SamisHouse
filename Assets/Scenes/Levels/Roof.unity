@@ -3207,6 +3207,11 @@ PrefabInstance:
       propertyPath: move_speed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 3087006443398625589, guid: ec4e9bb44e74ec14d8b3f87a34ac65c2,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec4e9bb44e74ec14d8b3f87a34ac65c2, type: 3}
 --- !u!1 &1180365627

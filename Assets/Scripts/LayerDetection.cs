@@ -12,4 +12,5 @@ public class LayerDetection : MonoBehaviour
     public const int enemies = 13;
     public const int key = 14;
     public const int player = 15;
+    public const int final_level_platform = 17;
 }

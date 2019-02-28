@@ -9,6 +9,7 @@ TagManager:
   - Player Lives
   - Eagle
   - Text
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Key
   - Player
   - hide_player
-  - 
+  - Final_Level_Platform
   - 
   - 
   - 
